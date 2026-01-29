@@ -7,6 +7,11 @@ import os
 from datetime import datetime
 from groq import Groq
 from typing import Dict, List, Optional
+## import variales from .env
+from dotenv import load_dotenv
+load_dotenv()
+
+Groq_api_key = os.getenv("GROQ_API_KEY")
 
 class AIChatbot:
     def __init__(self, product_manager, bundle_engine):
@@ -14,7 +19,7 @@ class AIChatbot:
         self.bundle_engine = bundle_engine
         
         # Groq API Configuration
-        self.groq_api_key = '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'
+        self.groq_api_key = Groq_api_key
         self.client = Groq(api_key=self.groq_api_key)
         self.model = 'llama-3.3-70b-versatile'
         

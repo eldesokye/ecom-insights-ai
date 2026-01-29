@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShop AI - Intelligent E-Commerce</title>
+    <meta name="description" content="AI-powered e-commerce platform with personalized recommendations and smart bundles">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🛍️</span>
+                    <span class="logo-text">SmartShop AI</span>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                    <button id="searchBtn" class="search-btn">🔍</button>
+                </div>
+
+                <button id="cartToggle" class="cart-toggle">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Category Filter -->
+            <section class="category-section">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All Products</button>
+                    <button class="category-btn" data-category="Electronics">Electronics</button>
+                    <button class="category-btn" data-category="Home">Home & Living</button>
+                    <button class="category-btn" data-category="Fitness">Fitness</button>
+                    <button class="category-btn" data-category="Fashion">Fashion</button>
+                    <button class="category-btn" data-category="Books">Books</button>
+                    <button class="category-btn" data-category="Office">Office</button>
+                </div>
+            </section>
+
+            <!-- AI Bundles Section -->
+            <section class="bundles-section">
+                <div class="section-header">
+                    <h2 class="section-title">✨ Personalized Bundles Just for You</h2>
+                    <p class="section-subtitle">AI-powered recommendations based on your interests</p>
+                </div>
+                <div id="bundlesContainer" class="bundles-container">
+                    <!-- Bundles will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="products-section">
+                <h2 class="section-title">Featured Products</h2>
+                <div id="productGrid" class="product-grid">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <aside id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button id="closeCart" class="close-cart">×</button>
+        </div>
+        
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax (10%):</span>
+                <span id="cartTax">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping:</span>
+                <span id="cartShipping">$0.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+            <p class="free-shipping-notice">🎉 Free shipping on orders over $100!</p>
+        </div>
+    </aside>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chatbotWidget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">🤖</div>
+            <div class="chatbot-title">
+                <h3>AI Shopping Assistant</h3>
+                <p class="chatbot-status">Online</p>
+            </div>
+            <button id="chatbotClose" class="chatbot-close">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="chatbotInput" placeholder="Ask me anything..." class="chat-input">
+            <button id="chatbotSend" class="chat-send-btn">Send</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button id="chatbotToggle" class="chatbot-toggle">
+        <span class="chatbot-toggle-icon">💬</span>
+        <span class="chatbot-toggle-text">Chat with AI</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2026 SmartShop AI - Powered by Advanced AI Technology 🚀
+            </p>
+            <p class="footer-subtext">
+                Tracking your preferences to provide personalized recommendations
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/actionTracker.js"></script>
+    <script src="js/bundleEngine.js"></script>
+    <script src="js/aiChatbot.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
